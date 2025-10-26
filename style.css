@@ -5,8 +5,14 @@ body {
     min-height: 100vh;
     display: flex;
     margin: 0;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-grow: 1;
 }
 
 .about {
@@ -41,6 +47,7 @@ body {
 
 .link-container {
     display: flex;
+    flex-wrap: wrap;
     align-self: flex-start;
     margin-left: 200px;
     margin-top: 100px;
@@ -115,6 +122,19 @@ body {
     color: #5865F2;
 }
 
+.link-card-item[href="https://mrsgreenapple.com"]:hover {
+    box-shadow: 0 6px 16px rgba(0, 98, 65, 0.3);
+    border: solid 1px rgba(0, 98, 65, 0.4);
+}
+
+.link-card-item[href="https://mrsgreenapple.com"]:hover svg {
+    fill: #006241;
+}
+
+.link-card-item[href="https://mrsgreenapple.com"]:hover .service-name {
+    color: #006241;
+}
+
 .link-text-wrapper {
     display: flex;
     flex-direction: column;
@@ -124,4 +144,43 @@ body {
 .username {
     font-size: 0.9em;
     color: #adb5bd;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #6c757d;
+    font-family: 'Roboto Mono', 'M PLUS 1 Code';
+}
+
+@media (max-width: 800px) {
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .about {
+        align-self: center;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .link-container {
+        flex-direction: column;
+        gap: 20px;
+        align-self: center;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .link-card-item {
+        width: 80vw;
+        max-width: 350px;
+    }
 }
