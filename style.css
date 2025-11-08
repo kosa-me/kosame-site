@@ -24,6 +24,14 @@ main {
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    padding: 12px;
+    box-sizing: border-box;
+    object-fit: cover;
+    background-image: radial-gradient(
+        circle at center,
+        rgba(108, 117, 125, 0.3) 0%,
+        rgba(108, 117, 125, 0)70%
+    );
 }
 
 .name {
@@ -83,16 +91,16 @@ main {
     transform: translateY(-3px);
 }
 
-.link-card-item[href="https://github.com"]:hover {
+.link-card-item[href="https://github.com/kosa-me"]:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     border: solid 1px rgba(24, 23, 23, 0.4);
 }
 
-.link-card-item[href="https://github.com"]:hover svg{
+.link-card-item[href="https://github.com/kosa-me"]:hover svg{
     fill: #181717;
 }
 
-.link-card-item[href="https://github.com"]:hover .service-name{
+.link-card-item[href="https://github.com/kosa-me"]:hover .service-name{
     color: #181717;
 }
 
